@@ -286,7 +286,7 @@ function Index() {
                 <h3 className="mt-5 text-sm uppercase tracking-[0.2em] text-foreground">{s.title}</h3>
                 <p className="mt-3 text-sm text-muted-foreground">{s.copy}</p>
                 {i !== process.length - 1 && (
-                  <div className="absolute right-0 top-0 hidden h-full w-px bg-border/60 md:translate-x-1/2 md:pl-4 lg:block" />
+                  <div className="absolute right-0 top-0 hidden h-full w-px bg-border/40 md:translate-x-4 lg:block" />
                 )}
               </div>
             ))}
