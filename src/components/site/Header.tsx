@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/royal-logo.png.asset.json";
 
 const nav = [
   { to: "/about", label: "About" },
@@ -18,7 +17,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo.url} alt="Royal Digital Assets logo" width={48} height={48} className="h-12 w-12 object-contain" />
+          <img src="/royal-logo.png" alt="Royal Digital Assets logo" width={48} height={48} className="h-12 w-12 object-contain" />
           <span className="leading-tight">
             <span className="block font-display text-xl tracking-[0.35em] text-foreground">ROYAL</span>
             <span className="block text-[9px] uppercase tracking-[0.2em] text-primary">
