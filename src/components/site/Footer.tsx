@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/royal-logo.png.asset.json";
 
 export function Footer() {
   return (
@@ -7,7 +6,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-14">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <img src={logo.url} alt="Royal Digital Assets" width={56} height={56} loading="lazy" className="h-14 w-14 object-contain" />
+            <img src="/royal-logo.png" alt="Royal Digital Assets" width={56} height={56} loading="lazy" className="h-14 w-14 object-contain" />
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">
               Royal Digital Assets builds long-term wealth through disciplined, institutional-grade
               digital asset strategies.
