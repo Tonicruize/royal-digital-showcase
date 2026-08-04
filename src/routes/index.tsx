@@ -18,6 +18,8 @@ import {
   BookOpen,
 } from "lucide-react";
 import { PageLayout, SectionTitle } from "@/components/site/Layout";
+import { InfoDialog } from "@/components/site/InfoDialog";
+import { pillarDetails, approachDetails } from "@/content/royal";
 import hero from "@/assets/hero-tower.jpg";
 import vault from "@/assets/vault.jpg";
 import growth from "@/assets/growth.jpg";
@@ -225,13 +227,21 @@ function Index() {
       <section className="border-b border-border/60 bg-card">
         <div className="mx-auto grid max-w-7xl divide-y divide-border/60 md:grid-cols-2 md:divide-y-0 lg:grid-cols-4 lg:divide-x">
           {pillars.map(({ icon: Icon, title, copy }) => (
-            <div key={title} className="flex gap-4 px-8 py-10">
-              <Icon className="h-8 w-8 shrink-0 text-primary" strokeWidth={1.2} />
-              <div>
-                <h3 className="text-sm uppercase tracking-[0.2em] text-primary">{title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{copy}</p>
-              </div>
-            </div>
+            <InfoDialog key={title} detail={pillarDetails[title]!}>
+              <button
+                type="button"
+                className="flex gap-4 px-8 py-10 text-left transition-colors hover:bg-background/60"
+              >
+                <Icon className="h-8 w-8 shrink-0 text-primary" strokeWidth={1.2} />
+                <div>
+                  <h3 className="text-sm uppercase tracking-[0.2em] text-primary">{title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{copy}</p>
+                  <span className="mt-3 inline-block text-[10px] uppercase tracking-[0.2em] text-primary/70">
+                    What this means
+                  </span>
+                </div>
+              </button>
+            </InfoDialog>
           ))}
         </div>
       </section>
@@ -257,12 +267,22 @@ function Index() {
                 <div className="relative p-8">
                   <h3 className="text-lg uppercase text-foreground">{item.title}</h3>
                   <p className="mt-3 max-w-xs text-sm text-muted-foreground">{item.copy}</p>
-                  <Link
-                    to={item.to}
-                    className="mt-8 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-primary"
-                  >
-                    Learn more <ArrowRight className="h-3.5 w-3.5" />
-                  </Link>
+                  <div className="mt-8 flex flex-wrap items-center gap-6">
+                    <InfoDialog detail={approachDetails[item.title]!}>
+                      <button
+                        type="button"
+                        className="border border-primary/60 px-5 py-2.5 text-[11px] uppercase tracking-[0.2em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+                      >
+                        What this means
+                      </button>
+                    </InfoDialog>
+                    <Link
+                      to={item.to}
+                      className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-primary"
+                    >
+                      Learn more <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                  </div>
                 </div>
               </article>
             ))}
