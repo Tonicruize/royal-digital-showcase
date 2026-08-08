@@ -38,10 +38,10 @@ export function Header() {
             </Link>
           ))}
           <Link
-            to="/contact"
+            to="https://app.royaldigitalassets.org/login"
             className="border border-primary bg-primary px-6 py-3 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-85"
           >
-            Speak to us
+            Login
           </Link>
         </nav>
 
