@@ -7,7 +7,7 @@ const nav = [
   { to: "/investment", label: "Investment" },
   { to: "/strategies", label: "Strategies" },
   { to: "/insights", label: "Insights" },
-  { to: "/contact", label: "Contact" },
+  { to: "/login", label: "Login" },
 ];
 
 export function Header() {
@@ -38,10 +38,10 @@ export function Header() {
             </Link>
           ))}
           <Link
-            to="https://app.royaldigitalassets.org/login"
+            to="https://app.royaldigitalassets.org/register"
             className="border border-primary bg-primary px-6 py-3 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-85"
           >
-            Login
+            Register
           </Link>
         </nav>
 
