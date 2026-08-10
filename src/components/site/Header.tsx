@@ -61,33 +61,41 @@ export function Header() {
       </div>
 
       {open && (
-        <nav className="border-t border-border/60 px-6 py-4 lg:hidden">
-          {nav.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              onClick={() => setOpen(false)}
-              className="block py-3 text-xs uppercase tracking-[0.18em] text-muted-foreground"
-            >
-              {item.label}
-            </Link>
-          
-          ))}
-         
-        </nav>
-       <Link
-            to="https://app.royaldigitalassets.org/login"
-            className="border border-primary bg-primary px-6 py-3 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-85 "
-          >
-            Login
-          </Link>
-          <Link
-            to="https://app.royaldigitalassets.org/register"
-            className="border border-primary bg-primary px-6 py-3 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-85"
-          >
-            Register
-          </Link>
-      )}
+  <nav className="border-t border-border/60 bg-background px-6 py-4 lg:hidden">
+    <div className="flex flex-col">
+      {nav.map((item) => (
+        <Link
+          key={item.to}
+          to={item.to}
+          onClick={() => setOpen(false)}
+          className="block py-3 text-xs uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-primary"
+          activeProps={{
+            className:
+              "block py-3 text-xs uppercase tracking-[0.18em] text-primary",
+          }}
+        >
+          {item.label}
+        </Link>
+      ))}
+
+      <div className="mt-3 flex w-full">
+        <a
+          href="https://app.royaldigitalassets.org/login"
+          className="flex flex-1 items-center justify-center border border-primary bg-primary px-4 py-3 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-85"
+        >
+          Login
+        </a>
+
+        <a
+          href="https://app.royaldigitalassets.org/register"
+          className="flex flex-1 items-center justify-center border border-l-0 border-primary bg-primary px-4 py-3 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-85"
+        >
+          Register
+        </a>
+      </div>
+    </div>
+  </nav>
+)}
     </header>
   );
 }
