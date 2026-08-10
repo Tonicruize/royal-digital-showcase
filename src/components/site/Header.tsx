@@ -7,7 +7,7 @@ const nav = [
   { to: "/investment", label: "Investment" },
   { to: "/strategies", label: "Strategies" },
   { to: "/insights", label: "Insights" },
-  { to: "https://app.royaldigitalassets.org/login", label: "Login" },
+
 ];
 
 export function Header() {
@@ -71,6 +71,18 @@ export function Header() {
             >
               {item.label}
             </Link>
+          <Link
+            to="https://app.royaldigitalassets.org/login"
+            className="border border-primary bg-primary px-6 py-3 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-85"
+          >
+            Login
+          </Link>
+          <Link
+            to="https://app.royaldigitalassets.org/register"
+            className="border border-primary bg-primary px-6 py-3 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-85"
+          >
+            Register
+          </Link>
           ))}
         </nav>
       )}
