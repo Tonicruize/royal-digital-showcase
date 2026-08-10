@@ -73,9 +73,11 @@ export function Header() {
             </Link>
           
           ))}
-          <Link
+         
+        </nav>
+       <Link
             to="https://app.royaldigitalassets.org/login"
-            className="border border-primary bg-primary px-6 py-3 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-85"
+            className="border border-primary bg-primary px-6 py-3 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-85 "
           >
             Login
           </Link>
@@ -85,7 +87,6 @@ export function Header() {
           >
             Register
           </Link>
-        </nav>
       )}
     </header>
   );
